@@ -10,16 +10,21 @@ import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { VertexNormalHelper } from 'three/examples/jsm/helpers/VertexNormalsHelper.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js'
-import boneVertexShader from '../public/static/boneVertexShader.glsl';
-import vertexShader from '../public/static/vertexShader.glsl';
-import cartesianFragment from '../public/static/cartesianFragment.glsl';
 import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js';
 import { GammaCorrectionShader } from 'three/examples/jsm/shaders/GammaCorrectionShader.js';
 import { GUI } from 'three/examples/jsm/libs/lil-gui.module.min.js';
-import boneCartesianFragment from '../public/static/boneCartesianFragment.glsl';
-import quadCartesianFragment from '../public/static/quadCartesianFragment.glsl';
 
+// import boneVertexShader from '../public/static/boneVertexShader.glsl';
+// import vertexShader from '../public/static/vertexShader.glsl';
+// import cartesianFragment from '../public/static/cartesianFragment.glsl';
+// import boneCartesianFragment from '../public/static/boneCartesianFragment.glsl';
+// import quadCartesianFragment from '../public/static/quadCartesianFragment.glsl';
 
+import boneVertexShader from '../static/boneVertexShader.glsl';
+import vertexShader from '../static/vertexShader.glsl';
+import cartesianFragment from '../static/cartesianFragment.glsl';
+import boneCartesianFragment from '../static/boneCartesianFragment.glsl';
+import quadCartesianFragment from '../static/quadCartesianFragment.glsl';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -257,7 +262,7 @@ function animate() {
   // mannequinMaterial.opacity = 0.5+0.5*Math.cos(duration/3.0);
   mannequinMaterial.opacity = Math.cos((currentTime-0.0)*2*Math.PI/period);
   composer.render();
-  console.log(quadMaterial.uniforms.time.value);
+//   console.log(quadMaterial.uniforms.time.value);
 
 }
 
