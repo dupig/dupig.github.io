@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif, Montserrat;
+    background-color: #151618FF;
+    background-image: url('static/purple-background-gird.png');
+    /* background-image: url('static/background-decoration-right.png'); */
+    /* background-size: 100% auto; */
+    background-size:cover;
+    background-position: top left;
+}
+
+.webgl {
+    position: fixed;
+    width: 100%;
+    outline: none;
+}
+
+.background-decoration-right-background {
+    position: fixed;
+    z-index: 1;
+    right: 0vw;
+    width: auto;
+    height: 100%;
+    /* background-size: 100% auto;
+    background-position: top right; */
+}
+
+.background-decoration-right-image {
+    position: fixed;
+    z-index: 3;
+    right: 0vw;
+    width: auto;
+    height: 100%;
+    /* background-size: 100% auto;
+    background-position: top right; */
+}
+
+.top-left-title {
+    /* Interactive Connectivity */
+    position: absolute;
+    left: 2vw;
+    top: 2vw;
+    opacity: 1;
+    font-family: Montserrat;
+    font-size: 1.66vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+.top-left-subtitle {
+    /* Interactive Connectivity */
+    position: absolute;
+    left: 2vw;
+    top: 4.5vw;
+    opacity: 1;
+    font-family: Montserrat;
+    font-size: 1vw;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+.top-left-block {
+    position: absolute;
+    left: 2vw;
+    top: 7vw;
+    width: 1vw;
+    height: 1vw;
+    opacity: 1;
+    background: #FFFFFF;
+    animation: blink 1s infinite;
+}
+
+.bottom-left-subtitle {
+    /* Interactive Connectivity */
+    position: absolute;
+    left: 2vw;
+    bottom: 2vw;
+    opacity: 1;
+    font-family: Montserrat;
+    font-size: 1vw;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+.image-container {
+    position: absolute;
+    width:  16vw; /* Adjust as needed */
+    height: 9vw; /* Adjust as needed */
+     /* Replace with your image path */
+    background-size: contain;
+    background-position: top left;
+    cursor: pointer; /* Changes the cursor to indicate the div is clickable */
+    border: 1px solid rgba(88, 88, 88, 1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0);
+    /* background-image: linear-gradient(90deg, #151618 0%, #000000 100%); */
+    transition: background 0.1s ease; /* Smooth transition for the overlay */
+    display: flex;
+    /* justify-content: center; /* Centers content horizontally */
+    /* align-items: center; /* Centers content vertically */ 
+}
+
+.overlay-title {
+    color: white;
+    font-family: Montserrat;
+    font-size: 1vw;
+    font-weight: 600;
+    position: absolute;
+    top: 1.4vw;
+    left: 1vw;
+    opacity: 0; /* Text is initially invisible */
+    transition: opacity 0.1s ease; /* Smooth transition for the text */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.overlay-icon {
+    color: white;
+    position: absolute;
+    top: 1.6vw;
+    right: 1vw;
+    width: 0.8vw;
+    height: 0.8vw;
+    background-size: contain;
+    background-position: top left;
+    opacity: 0; /* Text is initially invisible */
+    transition: opacity 0.1s ease; /* Smooth transition for the text */
+}
+
+
+.overlay-subtitle {
+    color: white;
+    font-family: Montserrat;
+    font-size: 0.6vw;
+    font-weight: 300;
+    position: absolute;
+    top: 2.8vw;
+    left: 1vw; 
+    opacity: 0; /* Text is initially invisible */
+    transition: opacity 0.1s ease; /* Smooth transition for the text */
+    letter-spacing: 0.05em;
+}
+
+.overlay-content {
+    color: white;
+    font-family: Montserrat;
+    font-size: 0.6vw;
+    font-weight: 300;
+    position: absolute;
+    top: 4.3vw;
+    left: 1vw; 
+    right: 1vw; 
+    opacity: 0; /* Text is initially invisible */
+    transition: opacity 0.1s ease; /* Smooth transition for the text */
+    letter-spacing: 0.05em;
+}
+
+.image-container:hover .overlay {
+    /* background: rgba(0, 0, 0, 0.5); Semi-transparent black background */
+    background-image: linear-gradient(330deg, #151618AA 50%, #00000088 100%);
+    border: 1px solid #615CEDFF;
+}
+
+.image-container:hover .overlay-title {
+    opacity: 1; /* Make the text visible */
+}
+
+.image-container:hover .overlay-icon {
+    opacity: 1; /* Make the text visible */
+}
+
+.image-container:hover .overlay-subtitle {
+    opacity: 1; /* Make the text visible */
+}
+
+.image-container:hover .overlay-content {
+    opacity: 1; /* Make the text visible */
+}
+
+.decoration-container {
+    position: absolute;
+    width:  16vw; /* Adjust as needed */
+    height: 9vw; /* Adjust as needed */
+     /* Replace with your image path */
+    background-size: contain;
+    background-position: top left;
+}
+
+@keyframes blink {
+    0% { background-color: white; }
+    12% { background-color: transparent; }
+    25% { background-color: #FFFFFF; }
+    50% { background-color: transparent; }
+    100% { background-color: white; }
+}
